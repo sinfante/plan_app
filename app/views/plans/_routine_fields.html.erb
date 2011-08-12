@@ -1,0 +1,7 @@
+<%= f.label :name, "Routine Name" %>
+<%= f.text_field :name %>
+<%= f.fields_for :steps do |s| %>
+  <%= render 'step_fields', :f => s %>
+<% end %>
+<%= f.link_to_add "Add a step", :steps %>
+<%= f.link_to_remove "Remove this routine" %>

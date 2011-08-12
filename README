@@ -1,0 +1,18 @@
+Example app of how to fill a plan with routines and steps.
+
+To install:
+
+*Make sure you have rvm and the bundler gem in 1.9.2@global gemset*
+
+git clone git://github.com/sinfante/plan_app.git
+cd plan_app
+bundle install
+cp config/database.yml.example config/database.yml
+
+*Edit the database.yml file with your database info*
+
+rake db:create
+rake db:migrate
+rails server
+
+*go to localhost:3000/plans in your favorite browser*
